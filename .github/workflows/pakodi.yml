@@ -1,7 +1,7 @@
 name: List Files in Triggered Branch
 
 on:
-  workflow_dispatch:   # allows manual trigger
+  workflow_dispatch:
     inputs:
       branch:
         description: 'Branch to list files from'
@@ -12,10 +12,10 @@ jobs:
   list-files:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the branch that triggered workflow
+      - name: Checkout the branch
         uses: actions/checkout@v4
-        # No 'ref' here, it will use the branch triggering the workflow
-        # If you trigger manually, the 'branch' input can be used dynamically
+        with:
+          ref: ${{ github.event.inputs.branch }}
 
       - name: Show branch info
         run: echo "Checked out branch: $GITHUB_REF"
