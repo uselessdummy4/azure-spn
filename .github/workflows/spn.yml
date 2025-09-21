@@ -29,3 +29,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Verify Connection
         run: az account show
+
+      - name: Listing resource groups
+        run: az group list
