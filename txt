@@ -1,6 +1,0 @@
-{
-  "clientId": "<clientId>",
-  "clientSecret": "<clientSecret>",
-  "subscriptionId": "<subscriptionId>",
-  "tenantId": "<tenantId>"
-}
